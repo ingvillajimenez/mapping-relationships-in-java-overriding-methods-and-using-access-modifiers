@@ -4,25 +4,36 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("******* Method hiding for static methods with the same name");
+        Property alpha = new Property("Residential Property",
+                "Alpha", 1200);
 
-        System.out.println("Property.getPropertyType(): " + Property.getPropertyType());
-        System.out.println("ResidentialProperty.getPropertyType(): " + ResidentialProperty.getPropertyType());
-        System.out.println("CommercialProperty.getPropertyType(): " + CommercialProperty.getPropertyType());
+        alpha.addPartner("Sangath Builders");
+        alpha.addPartner("Maxim and Co. Builders");
 
-        System.out.println("******** Method invoked depends on the static type of the variable");
+        System.out.println("alpha: " + alpha);
+//        Property beta = new Property("Commercial Property",
+//                "Beta", 3000);
+//        Property gamma = new Property("Industrial Property",
+//                "Gamma", 1000000);
+//        Property delta = new Property("Plot",
+//                "delta", 1600);
 
-        Property alpha = new ResidentialProperty(
-                "Alpha", 1200, ResidentialProperty.Type.TOWNHOME, 4000);
-        ResidentialProperty beta = new ResidentialProperty(
-                "Beta", 900, ResidentialProperty.Type.CONDO, 3000);
-        CommercialProperty gamma = new CommercialProperty(
-                "Gamma", 3000, CommercialProperty.Type.OFFICE, 7000);
+//        System.out.println("alpha: " + alpha);
+//        System.out.println("beta: " + beta);
+//        System.out.println("gamma: " + gamma);
+//        System.out.println("delta: " + delta);
 
-        System.out.println("alpha.getPropertyType(): " + alpha.getPropertyType());
-        System.out.println("beta.getPropertyType(): " + beta.getPropertyType());
-        System.out.println("gamma.getPropertyType(): " + gamma.getPropertyType());
+//        alpha.setId(1000);
+//        beta.setProjectName("Omega");
+//        gamma.setPropertySize(2500);
+//        delta.setPropertyType("Government Land");
+//
+//        System.out.println("\n*----**********************---*\n");
 
-        System.out.println();
+//        System.out.println("alpha (updated): " + alpha);
+//        System.out.println("beta (updated): " + beta);
+//        System.out.println("gamma (updated): " + gamma);
+//        System.out.println("delta (updated): " + delta);
+
     }
 }

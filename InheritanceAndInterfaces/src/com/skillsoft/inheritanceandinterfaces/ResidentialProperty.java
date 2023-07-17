@@ -13,19 +13,14 @@ public class ResidentialProperty extends Property{
 
     public ResidentialProperty(String projectName, int propertySize,
                                Type residentialPropertyType, float hoaFees) {
-        super("Residential", projectName, propertySize);
+        super(projectName, propertySize);
 
         this.residentialPropertyType = residentialPropertyType;
         this.hoaFees = hoaFees;
     }
 
-    @Override
-    public void printDetails() {
-        super.printDetails();
-
-        System.out.format("ResidentialProperty {type:%s, HOA Fees=%.1f}",
-                residentialPropertyType, hoaFees);
-        System.out.println();
+    public static String getPropertyType() {
+        return "Residential";
     }
 
     @Override

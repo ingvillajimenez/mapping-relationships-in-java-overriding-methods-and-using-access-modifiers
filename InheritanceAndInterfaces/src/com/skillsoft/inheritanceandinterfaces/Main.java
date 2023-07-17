@@ -4,50 +4,24 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("******* Method hiding for static methods with the same name");
+
+        System.out.println("Property.getPropertyType(): " + Property.getPropertyType());
+        System.out.println("ResidentialProperty.getPropertyType(): " + ResidentialProperty.getPropertyType());
+        System.out.println("CommercialProperty.getPropertyType(): " + CommercialProperty.getPropertyType());
+
+        System.out.println("******** Method invoked depends on the static type of the variable");
+
         Property alpha = new ResidentialProperty(
                 "Alpha", 1200, ResidentialProperty.Type.TOWNHOME, 4000);
-        Property beta = new ResidentialProperty(
+        ResidentialProperty beta = new ResidentialProperty(
                 "Beta", 900, ResidentialProperty.Type.CONDO, 3000);
-
-        System.out.println(alpha);
-        System.out.println(beta);
-
-        System.out.println();
-
-//        ResidentialProperty alpha = new ResidentialProperty(
-//                "Alpha", 1200, ResidentialProperty.Type.TOWNHOME, 4000);
-//        ResidentialProperty beta = new ResidentialProperty(
-//
-//                "Beta", 900, ResidentialProperty.Type.CONDO, 3000);
-//
-//        System.out.println(alpha);
-//
-//        System.out.println(beta);
-//
-//        System.out.println();
-
-        Property gamma = new CommercialProperty(
+        CommercialProperty gamma = new CommercialProperty(
                 "Gamma", 3000, CommercialProperty.Type.OFFICE, 7000);
-        Property delta = new CommercialProperty(
-                "Delta", 10000, CommercialProperty.Type.RETAIL, 15000);
 
-        System.out.println(gamma);
-        System.out.println(delta);
-
-        System.out.println();
-
-//        CommercialProperty gamma = new CommercialProperty(
-//                "Gamma", 3000, CommercialProperty.Type.OFFICE, 7000);
-//        CommercialProperty delta = new CommercialProperty(
-//                "Delta", 10000, CommercialProperty.Type.RETAIL, 15000);
-//
-//        System.out.println(gamma);
-//        System.out.println(delta);
-//
-//        System.out.println();
-
-        Property epsilon = new Property("Plot", "Epsilon", 1600);
-        System.out.println(epsilon);
+        System.out.println("alpha.getPropertyType(): " + alpha.getPropertyType());
+        System.out.println("beta.getPropertyType(): " + beta.getPropertyType());
+        System.out.println("gamma.getPropertyType(): " + gamma.getPropertyType());
 
         System.out.println();
     }

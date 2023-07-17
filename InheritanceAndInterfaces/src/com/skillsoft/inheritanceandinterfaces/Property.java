@@ -2,30 +2,21 @@ package com.skillsoft.inheritanceandinterfaces;
 
 public class Property {
 
-    // NOTE: getters and setters are excluded for clarity
-    // getters are ideally used if the member variable should be accessible to other code
-    // setters are ideally used for member variables which can be updated
-
-    private String propertyType = "unknown";
-
     private final String projectName;
     private final int propertySize;
 
-    public Property(String propertyType, String projectName, int propertySize) {
-        this.propertyType = propertyType;
+    public Property(String projectName, int propertySize) {
         this.projectName = projectName;
         this.propertySize = propertySize;
     }
 
-    public void printDetails() {
-        System.out.format("Property {type=%s, projectName=%s, propertySize=%s}, ",
-                propertyType, projectName, propertySize);
-        System.out.println();
+    public static String getPropertyType() {
+        return "unknown";
     }
 
     @Override
     public String toString() {
-        return String.format("Property {type=%s, projectName=%s, propertySize=%s}",
-                propertyType, projectName, propertySize);
+        return String.format("Property {projectName=%s, propertySize=%s}",
+                projectName, propertySize);
     }
 }

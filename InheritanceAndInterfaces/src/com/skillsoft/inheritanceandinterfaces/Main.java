@@ -1,23 +1,20 @@
 package com.skillsoft.inheritanceandinterfaces;
 
+import com.skillsoft.app.ResidentialProperty;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        ResidentialProperty residentialProperty = new ResidentialProperty("Iris", 3600);
+        System.out.println("Residential property: " + residentialProperty);
+//        residentialProperty.printDetails();
+
         IndustrialProperty industrialProperty = new IndustrialProperty("Acme", 1000000);
+        System.out.println("Industrial property: " + industrialProperty);
 
-        System.out.println("********Accessing protected members from the same package");
-
-        System.out.println("Property Type: " + industrialProperty.propertyType);
-        System.out.println("ID: " + industrialProperty.getId());
-        System.out.println("Project Name: " + industrialProperty.getProjectName());
-        System.out.println("Property Size: " + industrialProperty.getPropertyType());
-
-        System.out.println("Formatted string: " + industrialProperty.getFormattedString());
-
-//        System.out.println("Industrial Property: " + industrialProperty);
-//
-//        industrialProperty.printDetails();
+        Property property = new Property("Plot", "Enclaves", 3450);
+        System.out.println(property);
 
     }
 }

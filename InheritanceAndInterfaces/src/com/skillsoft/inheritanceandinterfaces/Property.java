@@ -8,7 +8,7 @@ public class Property {
     private String projectName;
     private int propertySize;
 
-    public Property(String propertyType, String projectName, int propertySize) {
+    protected Property(String propertyType, String projectName, int propertySize) {
 
         this.id = Math.round(Math.random() * 100000);
 

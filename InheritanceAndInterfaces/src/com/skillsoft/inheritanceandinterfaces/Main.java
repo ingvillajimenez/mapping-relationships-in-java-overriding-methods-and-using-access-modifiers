@@ -4,11 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ResidentialProperty residentialProperty = new ResidentialProperty("Acme", 2400);
-        CommercialProperty commercialProperty = new CommercialProperty("Bliss", 4000);
+        OnePlus onePlus = new OnePlus(499, true);
+        IPhone iPhone = new IPhone(1199, true);
 
-        System.out.println("Residential Property: " + residentialProperty);
-        System.out.println("Commercial Property: " + commercialProperty);
+//        Phone motorola = new Phone("Android", "Moto G", 299);
+
+        System.out.println("One Plus: " + onePlus);
+        System.out.println("iPhone: " + iPhone);
+//        System.out.println("Motorola: " + motorola);
 
     }
 }

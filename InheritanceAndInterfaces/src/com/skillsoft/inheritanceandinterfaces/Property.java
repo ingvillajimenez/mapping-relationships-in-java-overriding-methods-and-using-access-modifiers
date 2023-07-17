@@ -22,4 +22,10 @@ public class Property {
                 propertyType, projectName, propertySize);
         System.out.println();
     }
+
+    @Override
+    public String toString() {
+        return String.format("Property {type=%s, projectName=%s, propertySize=%s}",
+                propertyType, projectName, propertySize);
+    }
 }

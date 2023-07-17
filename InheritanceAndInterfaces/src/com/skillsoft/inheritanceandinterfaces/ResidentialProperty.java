@@ -21,8 +21,18 @@ public class ResidentialProperty extends Property{
 
     @Override
     public void printDetails() {
+        super.printDetails();
+
         System.out.format("ResidentialProperty {type:%s, HOA Fees=%.1f}",
                 residentialPropertyType, hoaFees);
         System.out.println();
+    }
+
+    @Override
+    public String toString() {
+        String baseString = super.toString();
+
+        return String.format("%s, \nResidentialProperty {type=%s, HOA Fees=%.1f}",
+                baseString, residentialPropertyType, hoaFees);
     }
 }

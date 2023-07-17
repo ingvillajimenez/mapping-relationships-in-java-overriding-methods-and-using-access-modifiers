@@ -21,8 +21,18 @@ public class CommercialProperty extends Property {
 
     @Override
     public void printDetails() {
+        super.printDetails();
+
         System.out.format("CommercialProperty {type=%s, Contracted Services Fee=%.1f}",
                 commercialPropertyType, contractedServicesFees);
         System.out.println();
+    }
+
+    @Override
+    public String toString() {
+        String baseString = super.toString();
+
+        return String.format("%s, \nCommercialProperty {type=%s, Contracted Services Fees=%.1f}",
+                baseString, commercialPropertyType, contractedServicesFees);
     }
 }

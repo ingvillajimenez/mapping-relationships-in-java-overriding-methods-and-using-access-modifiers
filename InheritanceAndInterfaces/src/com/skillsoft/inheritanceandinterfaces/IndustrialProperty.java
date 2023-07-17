@@ -7,12 +7,8 @@ public class IndustrialProperty extends Property {
     }
 
     public void printDetails() {
-        System.out.println(getFormattedString());
+        System.out.println(String.format(
+                "Property type: %s, Project name: %s, Property Size in sqft: %s",
+                propertyType, getProjectName(), getPropertySize()));
     }
-
-//    public void printDetails() {
-//        System.out.println(String.format(
-//                "Property type: %s, Project name: %s, Property Size in sqft: %s",
-//                propertyType, getProjectName(), getPropertySize()));
-//    }
 }

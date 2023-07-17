@@ -2,13 +2,13 @@ package com.skillsoft.inheritanceandinterfaces;
 
 public class Property {
 
-    protected String propertyType;
+    String propertyType;
 
     private long id;
     private String projectName;
     private int propertySize;
 
-    protected Property(String propertyType, String projectName, int propertySize) {
+    public Property(String propertyType, String projectName, int propertySize) {
 
         this.id = Math.round(Math.random() * 100000);
 
@@ -17,23 +17,23 @@ public class Property {
         this.propertySize = propertySize;
     }
 
-    protected String getPropertyType() {
+    String getPropertyType() {
         return propertyType;
     }
 
-    protected long getId() {
+    long getId() {
         return id;
     }
 
-    protected String getProjectName() {
+    String getProjectName() {
         return projectName;
     }
 
-    protected int getPropertySize() {
+    int getPropertySize() {
         return propertySize;
     }
 
-    protected String getFormattedString() {
+    String getFormattedString() {
         return String.format("\nProperty {propertyType=%s, id=%d, projectName=%s, propertySize=%s}",
                 propertyType, id, projectName, propertySize);
     }

@@ -8,13 +8,17 @@ public class Property {
     private String projectName;
     private int propertySize;
 
-    public Property(String propertyType, String projectName, int propertySize) {
+    private Property(String propertyType, String projectName, int propertySize) {
 
         this.id = Math.round(Math.random() * 100000);
 
         this.propertyType = propertyType;
         this.projectName = projectName;
         this.propertySize = propertySize;
+    }
+
+    public static Property getPropertyInstance(String propertyType, String projectName, int propertySizeInSqft) {
+        return new Property(propertyType, projectName, propertySizeInSqft);
     }
 
     public int getPropertySize() {

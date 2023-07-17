@@ -4,11 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        IndustrialProperty industrialProperty = new IndustrialProperty("Acme", 1000000);
+        Property property = Property.getPropertyInstance(
+                "Residential", "Alpha", 1200);
 
-        System.out.println("Industrial Property: " + industrialProperty);
-
-        industrialProperty.printDetails();
+//        Property property = new Property("Residential", "Alpha", 1200);
+//
+        System.out.println("Property: " + property);
 
     }
 }

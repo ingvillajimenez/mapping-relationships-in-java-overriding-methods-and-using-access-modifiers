@@ -1,6 +1,6 @@
 package com.skillsoft.inheritanceandinterfaces;
 
-public class IPhone extends Phone {
+public abstract class IPhone extends Phone {
 
     private boolean airpods;
 
@@ -9,6 +9,11 @@ public class IPhone extends Phone {
 
         this.airpods = airpods;
     }
+
+//    @Override
+//    public double computeTotalPrice() {
+//        return getBasePrice() + getBasePrice() * 0.10;
+//    }
 
     @Override
     public String toString() {

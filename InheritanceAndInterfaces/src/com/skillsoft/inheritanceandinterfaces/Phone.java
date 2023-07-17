@@ -13,6 +13,10 @@ public abstract class Phone {
         this.basePrice = basePrice;
     }
 
+    protected float getBasePrice() {
+        return basePrice;
+    }
+
     public abstract double computeTotalPrice();
 
     @Override

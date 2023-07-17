@@ -11,6 +11,11 @@ public class OnePlus extends Phone {
     }
 
     @Override
+    public double computeTotalPrice() {
+        return getBasePrice() + getBasePrice() * 0.05;
+    }
+
+    @Override
     public String toString() {
         String superString = super.toString();
 
